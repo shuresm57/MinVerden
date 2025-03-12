@@ -11,7 +11,7 @@ public class HomeController {
         return "/index";
     }
 
-    @GetMapping("/niko")
+    @GetMapping("/home/niko")
     public String niko(){
         return "/home/niko";
     }

@@ -1,3 +1,22 @@
+/*@import url(stylesheet.css);*/
+
+body {
+    background: white;
+    color: var(--text-color);
+    margin-right: 60px;
+}
+
+.text-wrapper{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.buttonGrid{
+    display: flex;
+    grid-column-gap: 1px;
+    justify-content: center;
+}
+
 button {
     width: 165px;
     height: 62px;
@@ -21,6 +40,21 @@ button::after {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+h1{
+    right: 100px;
+}
+
+.about-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+img{
+    width: 400px;
+    height: 400px;
 }
 
 button:active {
