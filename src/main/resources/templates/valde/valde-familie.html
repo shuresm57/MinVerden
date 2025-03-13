@@ -5,9 +5,11 @@
     <title>Title</title>
     <link rel="stylesheet" href="/css/person-side.css">
 </head>
-<body>x
+<body>
 <div class="sub-text-container">
-    <p th:text="${message}"></p>
+    <ul>
+        <li th:each="familie : ${familie}" th:text="${familie}"></li>
+    </ul>
 </div>
 
 <div class="farve-container">

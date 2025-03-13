@@ -6,11 +6,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.List;
+
 
 @Controller
 public class ValdeController {
 
-    private Person valde = new Person("Valdemar","https://github.com/shuresm57",30, "Grøn");
+    private final Person valde = new Person("Valdemar","https://github.com/shuresm57",30, "Grøn");
 
     @GetMapping("/valde/valde-about")
     public String valde(Model model){
@@ -19,32 +21,31 @@ public class ValdeController {
     }
 
     @GetMapping("/valde-familie")
-    public String showPersonPage(Model model) {
-        model.addAttribute("message", FileUtil.readTextFile("src/main/resources/static/familier/valdesfamilie"));
+    public String showFamilie(Model model) {
+        List<String> familie = FileUtil.readTextFile("src/main/resources/static/valde-info/valdesfamilie");
+        model.addAttribute("familie", familie);
         return "valde/valde-familie";
     }
 
     @GetMapping("/valde-funfact")
     public String valdeFunFacts(Model model) {
-        model.addAttribute("valde", valde);
-        String[] funFacts = {
-                "Ghita Nørby har råbt af mig (ikke på en sjov måde)",
-                "Jeg har spillet guitar i 17 år",
-                "Jeg kan lave en vejrmølle på én hånd"
-        };
+        List<String> funFacts = FileUtil.readTextFile("src/main/resources/static/valde-info/valdesfunfacts");
         model.addAttribute("funFacts", funFacts);
         return "valde/valde-funfact";
     }
 
     @GetMapping("/valde-hobby")
-    public String valdeHobby(Model model){
+    public String showHobby(Model model){
         model.addAttribute("valde", valde);
+        List<String> hobby = FileUtil.readTextFile("src/main/resources/static/valde-info/valdeshobbyer");
+        model.addAttribute("hobby", hobby);
         return"valde/valde-hobby";
     }
 
     @GetMapping("/valde-yfarve")
-    public String valdeFarve(Model model){
-        model.addAttribute("valde", valde);
+    public String showYndlingsfarve(Model model){
+        List<String> farve = FileUtil.readTextFile("src/main/resources/static/valde-info/valdesfarve");
+        model.addAttribute("farve", farve);
         return"valde/valde-yfarve";
     }
 

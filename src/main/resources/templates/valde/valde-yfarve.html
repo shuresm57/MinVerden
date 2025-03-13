@@ -7,12 +7,12 @@
 </head>
 <body id="yfarve-valde-baggrund">
 <div class="sub-text-container">
-    <div id="yfarve-valde">
-        <span th:text="${valde.yndlingsfarve}"></span>
-    </div>
+    <ul id="yfarve-valde">
+        <li th:each="farve : ${farve}" th:text="${farve}"></li>
+    </ul>
 </div>
     <div class="buttonGrid">
-        <a href="/niko/niko-about">
+        <a href="/valde/valde-about">
             <button>Tilbage</button>
         </a>
     </div>

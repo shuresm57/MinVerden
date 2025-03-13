@@ -7,9 +7,9 @@
 </head>
 <body>
 <div class="sub-text-container">
-    <div>
-        <span th:text="${valde.name}"></span>s hobby er at spille computer :)
-    </div>
+    <ul>
+        <li th:each="hobby : ${hobby}" th:text="${hobby}"></li>
+    </ul>
 </div>
 
 <div class="farve-container">

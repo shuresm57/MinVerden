@@ -27,6 +27,11 @@ footer img {
     display: block;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 .about-container {
     display: flex;
     gap: 100px;
