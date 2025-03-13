@@ -1,13 +1,13 @@
 package org.example.minverden.controller;
 
-import org.example.minverden.model.Niko;
+import org.example.minverden.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class NikoController {
-    private Niko niko = new Niko("Niko", "https://github.com/NikoZK", 24,"Blå");
+    private Person niko = new Person("Niko", "https://github.com/NikoZK", 24,"Blå");
 
 
     @GetMapping("/niko/niko-about")

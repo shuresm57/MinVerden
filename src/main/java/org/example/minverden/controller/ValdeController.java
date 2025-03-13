@@ -1,6 +1,6 @@
 package org.example.minverden.controller;
 
-import org.example.minverden.model.Valde;
+import org.example.minverden.model.Person;
 import org.example.minverden.util.FileUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ValdeController {
 
-    private Valde valde = new Valde("Valdemar","https://github.com/shuresm57",30, "Grøn");
+    private Person valde = new Person("Valdemar","https://github.com/shuresm57",30, "Grøn");
 
     @GetMapping("/valde/valde-about")
     public String valde(Model model){

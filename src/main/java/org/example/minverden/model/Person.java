@@ -1,6 +1,6 @@
 package org.example.minverden.model;
 
-public abstract class Person {
+public class Person {
 
     private String name;
     private String gitHub;
