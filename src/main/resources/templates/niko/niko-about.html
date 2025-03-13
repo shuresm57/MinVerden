@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Hoe slayer</title>
     <link rel="stylesheet" href="/css/person-side.css">
+    <link rel="stylesheet" href="/css/modal.css">
 </head>
 <body>
 
@@ -19,7 +20,16 @@
                 Du kan lære meget mere om mig ved at trykke på en af knapperne.
             </p>
         </div>
-        <img src="/img/niko-back.png" alt="niko">
+        <a href="#modal-niko">
+            <img src="/img/niko-back.png" alt="niko" class="modal-trigger">
+        </a>
+    </div>
+</div>
+
+<div id="modal-niko" class="modal">
+    <a href="#" class="modal-close">&times;</a>
+    <div class="modal-container">
+        <img src="/img/niko-back.png" alt="niko" class="modal-img">
     </div>
 </div>
 <div class="buttonGrid">

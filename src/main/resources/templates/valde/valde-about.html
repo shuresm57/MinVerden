@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Valdemar</title>
     <link rel="stylesheet" href="/css/person-side.css">
+    <link rel="stylesheet" href="/css/modal.css">
 </head>
 <body>
 <div class="about-wrapper">
@@ -22,7 +23,16 @@
                 <br>
                 Du kan lære meget mere om mig ved at trykke på en af knapperne.
         </div>
-        <img src="/img/valde-front.jpg" alt="">
+        <a href="#modal-valde">
+            <img src="/img/valde-front.jpg" alt="Valdemar" class="modal-trigger">
+        </a>
+    </div>
+</div>
+
+<div id="modal-valde" class="modal">
+    <a href="#" class="modal-close">&times;</a>
+    <div class="modal-container">
+        <img src="/img/valde-front.jpg" alt="Valdemar" class="modal-img">
     </div>
 </div>
 <div class="buttonGrid">
