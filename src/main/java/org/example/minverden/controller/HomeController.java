@@ -8,16 +8,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(){
-        return "/index";
+        return "home/index";
     }
 
-    @GetMapping("/home/niko")
-    public String niko(){
-        return "/home/niko";
-    }
-
-    @GetMapping("/home/valde")
-    public String valde(){
-        return "/home/valde";
-    }
 }

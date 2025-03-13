@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fun facts</title>
+    <link rel="stylesheet" href="/css/person-side.css">
+</head>
+<body>
+<h1>
+    <img src="/img/niko-fuld.jpg" alt="nzkfunfact">
+</h1>
+<h2><span th:text="${niko.name}"></span>'s fun facts!</h2>
+<ul>
+    <li th:each="fact : ${funFacts}" th:text="${fact}"></li>
+</ul>
+<div class="farve-container">
+    <div class="buttonGrid">
+        <a href="/niko/niko-about">
+            <button>Tilbage</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>
+

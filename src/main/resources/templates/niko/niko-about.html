@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoe slayer</title>
+    <link rel="stylesheet" href="/css/person-side.css">
+</head>
+<body>
+
+<div class="about-wrapper">
+    <h1>Niko Z. Kondratowicz</h1>
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Om mig</h2>
+            <p>
+                Mit navn er <span th:text="${niko.name}"></span> og jeg er <span th:text="${niko.age}"></span> år gammel og en god dreng. Min GitHub er: <a th:href="${niko.gitHub}" target="_blank">GitHub</a>
+                <br>
+                <br>
+                Du kan lære meget mere om mig ved at trykke på en af knapperne.
+            </p>
+        </div>
+        <img src="/img/niko-back.png" alt="niko">
+    </div>
+</div>
+<div class="buttonGrid">
+    <a href="/niko-familie">
+        <button>Familie</button>
+    </a>
+    <a href="/niko-hobby">
+    <button>Hobby</button>
+    </a>
+    <a href="/niko-funfact">
+    <button>Fun fact</button>
+    </a>
+    <a href="/niko-yfarve">
+    <button>Yndlingsfarve</button>
+    </a>
+</div>
+
+    <div class="buttonGrid">
+        <a href="/">
+            <button>Tilbage</button>
+        </a>
+    </div>
+
+<footer>
+    <img src="/img/footer-image.png" alt="footer-image">
+</footer>
+</body>
+</html>

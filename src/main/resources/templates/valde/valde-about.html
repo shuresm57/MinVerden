@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valdemar</title>
+    <link rel="stylesheet" href="/css/person-side.css">
+</head>
+<body>
+<div class="about-wrapper">
+    <h1>Valdemar Støvring Sørensen</h1>
+    <div class="about-container">
+        <div class="about-text">
+                <h2>Om mig</h2>
+                Mit navn er <span th:text="${valde.name}"></span>, jeg er <span th:text="${valde.age}"></span> år gammel
+                år gammel og jeg bor på Frederiksberg med min kæreste Amalie.
+                Sammen venter vi et barn til august og vi tror, at han skal hedde Svend.
+                Når jeg ikke skriver kode der virker
+            <a th:href="${valde.gitHub}" target="_blank">(GitHub)</a>
+                så arbejder jeg som lydtekniker for bands som
+                Brimheim, Eyes og Syl.
+                <br>
+                <br>
+                Du kan lære meget mere om mig ved at trykke på en af knapperne.
+        </div>
+        <img src="/img/valde-front.jpg" alt="">
+    </div>
+</div>
+<div class="buttonGrid">
+    <a th:href="@{/valde-familie}">
+        <button>Familie</button>
+    </a>
+    <a th:href="@{/valde-hobby}">
+        <button>Hobby</button>
+    </a>
+    <a th:href="@{/valde-funfact}">
+        <button>Fun fact</button>
+    </a>
+    <a th:href="@{/valde-yfarve}">
+        <button>Yndlingsfarve</button>
+    </a>
+</div>
+
+<div class="buttonGrid">
+    <a href="/">
+        <button>Tilbage</button>
+    </a>
+</div>
+
+<footer>
+    <img src="/img/footer-image.png" alt="footer-image">
+</footer>
+</body>
+</html>
